@@ -1,0 +1,2 @@
+class EurCbr < ApplicationRecord
+end
