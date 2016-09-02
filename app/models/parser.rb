@@ -4,11 +4,11 @@ class Parser < ApplicationRecord
   require 'nokogiri'
 
   arr = {}
-  arr[0] = { 'lnk' => 'https://news.yandex.ru/quotes/2002.html', 'cmnt' => 'USD ÌÌÂÁ', 'tbl' => 'usd_mmvb' }
-  arr[1] = { 'lnk' => 'https://news.yandex.ru/quotes/2000.html', 'cmnt' => 'EUR ÌÌÂÁ', 'tbl' => 'eur_mmvb' }
-  arr[2] = { 'lnk' => 'https://news.yandex.ru/quotes/1.html', 'cmnt' => 'USD ÖÁ', 'tbl' => 'usd_cbr' }
-  arr[3] = { 'lnk' => 'https://news.yandex.ru/quotes/23.html', 'cmnt' => 'EUR ÖÁ', 'tbl' => 'eur_cbr' }
-  arr[4] = { 'lnk' => 'https://news.yandex.ru/quotes/10007.html', 'cmnt' => 'CHF ÖÁ', 'tbl' => 'chf_cbr' }
+  arr[0] = { 'lnk' => 'https://news.yandex.ru/quotes/2002.html', 'cmnt' => 'USD ĞœĞœĞ’Ğ‘', 'tbl' => 'usd_mmvb' }
+  arr[1] = { 'lnk' => 'https://news.yandex.ru/quotes/2000.html', 'cmnt' => 'EUR ĞœĞœĞ’Ğ‘', 'tbl' => 'eur_mmvb' }
+  arr[2] = { 'lnk' => 'https://news.yandex.ru/quotes/1.html', 'cmnt' => 'USD Ğ¦Ğ‘', 'tbl' => 'usd_cbr' }
+  arr[3] = { 'lnk' => 'https://news.yandex.ru/quotes/23.html', 'cmnt' => 'EUR Ğ¦Ğ‘', 'tbl' => 'eur_cbr' }
+  arr[4] = { 'lnk' => 'https://news.yandex.ru/quotes/10007.html', 'cmnt' => 'CHF Ğ¦Ğ‘', 'tbl' => 'chf_cbr' }
 
   arr.each do |key, array|
     puts "#{key}: #{array} #{array['lnk']}"
