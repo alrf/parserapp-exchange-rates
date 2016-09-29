@@ -3,7 +3,6 @@ class Parser < ApplicationRecord
   require 'open-uri'
   require 'nokogiri'
 
-  def yandex()
 
     arr = {}
     arr[0] = { 'lnk' => 'https://news.yandex.ru/quotes/2002.html', 'cmnt' => 'USD ММВБ', 'tbl' => 'usd_mmvb' }
@@ -38,6 +37,5 @@ class Parser < ApplicationRecord
 
     end
 
-  end
 
 end
