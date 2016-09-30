@@ -12,7 +12,7 @@ class Parser < ApplicationRecord
 
   arr.each do |key, array|
     puts "#{key}: #{array} #{array['lnk']}"
-    table = array['tbl']
+    table = array['tbl'].constantize
     page = Nokogiri::HTML(open(array['lnk']))
     #p page
 
@@ -36,9 +36,8 @@ class Parser < ApplicationRecord
     p change
 
 
-    tbl = table.constantize
     d = DateTime.now.strftime('%Y-%m-%d')
-    tbl = tbl.where(date: d).first_or_initialize
+    tbl = table.where(date: d).first_or_initialize
     tbl.date = d
     tbl.value = 0
     tbl.change = 0
@@ -51,8 +50,7 @@ class Parser < ApplicationRecord
       d = Date.strptime(d, '%d.%m.%y').strftime('%Y-%m-%d')
       p d
 
-      tbl = table.constantize
-      tbl = tbl.where(date: d).first_or_initialize
+      tbl = table.where(date: d).first_or_initialize
       tbl.date = d
       tbl.value = value[index]
       tbl.change = change[index]
